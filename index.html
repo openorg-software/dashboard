@@ -5,38 +5,41 @@
     <link rel="stylesheet" href="css/customization.css">
     <div class="mdc-top-app-bar__row">
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-            <span class="mdc-top-app-bar__title">OpenOrg</span>
+            <span class="mdc-top-app-bar__title">{{title}}</span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="GitHub"
+                onclick="window.open('https://github.com/openorg-software','_blank')"><img
+                    src="assets/github.svg"></button>
         </section>
     </div>
 </header>
 <main class="mdc-top-app-bar--fixed-adjust">
-
     <div class="parent">
-        <div class="mdc-card div1">
+        <div class="mdc-card top-left">
             <div class="mdc-card__primary-action">
                 <div class="mdc-card__media mdc-card__media--square">
                     <div class="mdc-card__media-content container">
-                        <img src="https://js.wiki/img/wikijs-full-2021.b840e376.svg">
+                        <img class="logo" src="https://js.wiki/img/wikijs-full-2021.b840e376.svg">
                     </div>
                 </div>
-
                 <div class="mdc-card__ripple"></div>
             </div>
             <div class="mdc-card__actions">
                 <div class="mdc-card__action-buttons">
                     <button class="mdc-button mdc-card__action mdc-card__action--button"
-                        onclick="window.open('https://wiki.openorg.software','_blank')">
+                        onclick="window.open('https://wiki.{{domain}}','_blank')">
                         <div class="mdc-button__ripple"></div>
-                        <span class="mdc-button__label">Open</span>
+                        <span class="mdc-button__label">Open Wiki.js</span>
                     </button>
                 </div>
             </div>
         </div>
-        <div class="mdc-card div2">
+        <div class="mdc-card top-right">
             <div class="mdc-card__primary-action">
                 <div class="mdc-card__media mdc-card__media--square">
                     <div class="mdc-card__media-content container" style="background-color:#0082c9;">
-                        <img src="https://nextcloud.com/wp-content/uploads/2021/12/logo.png">
+                        <img class="logo" src="https://nextcloud.com/wp-content/uploads/2021/12/logo.png">
                     </div>
                 </div>
                 <!-- ... additional primary action content ... -->
@@ -45,15 +48,32 @@
             <div class="mdc-card__actions">
                 <div class="mdc-card__action-buttons">
                     <button class="mdc-button mdc-card__action mdc-card__action--button"
-                        onclick="window.open('https://cloud.openorg.software','_blank')">
+                        onclick="window.open('https://cloud.{{domain}}','_blank')">
                         <div class="mdc-button__ripple"></div>
-                        <span class="mdc-button__label">Open</span>
+                        <span class="mdc-button__label">Open Nextcloud</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mdc-card bottom-left">
+            <div class="mdc-card__primary-action">
+                <div class="mdc-card__media mdc-card__media--square">
+                    <div class="mdc-card__media-content container">
+                        <img class="logo" src=" https://git.{{domain}}/assets/img/logo.svg">
+                    </div>
+                </div>
+                <!-- ... additional primary action content ... -->
+                <div class="mdc-card__ripple"></div>
+            </div>
+            <div class="mdc-card__actions">
+                <div class="mdc-card__action-buttons">
+                    <button class="mdc-button mdc-card__action mdc-card__action--button"
+                        onclick="window.open('https://git.{{domain}}','_blank')">
+                        <div class="mdc-button__ripple"></div>
+                        <span class="mdc-button__label">Open Gitea</span>
                     </button>
                 </div>
             </div>
         </div>
     </div>
-
-
-
 </main>
