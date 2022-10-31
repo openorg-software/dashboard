@@ -6,5 +6,5 @@ let servicesMap = new Map([
     ["wikijs", "wiki"]])
 
 function openService(name) {
-    window.open('https://' + servicesMap.get(name) + domain, '_blank')
+    window.open('https://' + servicesMap.get(name) + "." + domain, '_blank')
 }
