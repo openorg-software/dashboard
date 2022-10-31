@@ -1,6 +1,7 @@
 <header class="mdc-top-app-bar">
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="ts/dashboard.ts"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/customization.css">
     <div class="mdc-top-app-bar__row">
@@ -19,7 +20,7 @@
         <div class="mdc-card top-left">
             <div class="mdc-card__primary-action">
                 <div class="mdc-card__media mdc-card__media--square">
-                    <div class="mdc-card__media-content container">
+                    <div class="mdc-card__media-content container" onclick="openService('wiki')">
                         <img class="logo" src="https://js.wiki/img/wikijs-full-2021.b840e376.svg">
                     </div>
                 </div>
@@ -27,8 +28,7 @@
             </div>
             <div class="mdc-card__actions">
                 <div class="mdc-card__action-buttons">
-                    <button class="mdc-button mdc-card__action mdc-card__action--button"
-                        onclick="window.open('https://wiki.{{domain}}','_blank')">
+                    <button class="mdc-button mdc-card__action mdc-card__action--button" onclick="openService('wiki')">
                         <div class="mdc-button__ripple"></div>
                         <span class="mdc-button__label">Open Wiki.js</span>
                     </button>
@@ -38,7 +38,8 @@
         <div class="mdc-card top-right">
             <div class="mdc-card__primary-action">
                 <div class="mdc-card__media mdc-card__media--square">
-                    <div class="mdc-card__media-content container" style="background-color:#0082c9;">
+                    <div class="mdc-card__media-content container" style="background-color:#0082c9;"
+                        onclick="openService('nextcloud')">
                         <img class="logo" src="https://nextcloud.com/wp-content/uploads/2021/12/logo.png">
                     </div>
                 </div>
@@ -48,7 +49,7 @@
             <div class="mdc-card__actions">
                 <div class="mdc-card__action-buttons">
                     <button class="mdc-button mdc-card__action mdc-card__action--button"
-                        onclick="window.open('https://cloud.{{domain}}','_blank')">
+                        onclick="openService('nextcloud')">
                         <div class="mdc-button__ripple"></div>
                         <span class="mdc-button__label">Open Nextcloud</span>
                     </button>
@@ -58,7 +59,7 @@
         <div class="mdc-card bottom-left">
             <div class="mdc-card__primary-action">
                 <div class="mdc-card__media mdc-card__media--square">
-                    <div class="mdc-card__media-content container">
+                    <div class="mdc-card__media-content container" onclick="openService('gitea')">
                         <img class="logo" src=" https://git.{{domain}}/assets/img/logo.svg">
                     </div>
                 </div>
@@ -67,8 +68,7 @@
             </div>
             <div class="mdc-card__actions">
                 <div class="mdc-card__action-buttons">
-                    <button class="mdc-button mdc-card__action mdc-card__action--button"
-                        onclick="window.open('https://git.{{domain}}','_blank')">
+                    <button class="mdc-button mdc-card__action mdc-card__action--button" onclick="openService('gitea')">
                         <div class="mdc-button__ripple"></div>
                         <span class="mdc-button__label">Open Gitea</span>
                     </button>
